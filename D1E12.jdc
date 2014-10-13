@@ -1,0 +1,14 @@
+int limit=7;
+int i=0;
+int counter=0;
+for (i=1;i<=limit;i++) {
+	counter = i;
+	while (counter > 0) {
+		if (counter==1)
+			println(i);
+		else
+			print(i);
+		counter--;
+	}
+}
+println("\\ldots");

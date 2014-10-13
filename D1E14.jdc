@@ -1,0 +1,25 @@
+
+int limit = 1000;
+int counterLimit = 0;
+int i = 0;
+int counter = 0;
+int remainder = 0;
+boolean finished = false;
+
+while (!finished) {
+	i++;	
+	counter = i - 1;
+	while (counter > 0) {
+		remainder = i % counter;
+		if (remainder == 0)
+			break;	
+		counter = counter - 1;
+	}
+	if ((counter == 1) || (i == 1)) {					
+		counterLimit++;
+		println(counterLimit + " " + i);
+	}
+	if (counterLimit == limit)
+		finished = true;
+}
+println("Finished!");

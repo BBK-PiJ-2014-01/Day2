@@ -1,0 +1,17 @@
+boolean finished = false;
+String p1, p2 = " ";
+int p1Score = 0;
+int p2Score = 0;
+
+while (!finished) {
+	String input = System.console().readLine();
+	if ((input != "PP") || (input != "RR") || (input != "SS") {
+		p1 = input.substring(0,1);
+		p2 = input.substring(1);
+		if ((p1 == "R") && (p2 == "S"))
+		if (Math.abs(p1Score - p2Score) == 3)
+			finished = true;
+	}
+}
+println("p1 score is: " + p1Score);
+println("p2 score is: " + p2Score);

@@ -1,0 +1,45 @@
+
+boolean finished = false;
+boolean lowFound = false;
+boolean highFound = false;
+
+int counter = 0;
+
+int low = 0;
+int high = 0;
+int remainder = 0;
+int distance = 1;
+
+print("Enter a number: ");
+int x = readInt();
+
+while (!finished) {
+	low = x - distance;
+	high = x + distance;
+	counter = low - 1;
+	while (counter > 0) {
+		remainder = low % counter;
+		if (remainder == 0)
+			break;		
+		counter = counter - 1;
+	}
+	if ((counter == 1) || (low == 1)) {
+		lowFound = true;
+		finished = true;		
+		println(low);
+	}
+	counter = high - 1;
+	while (counter > 0) {
+		remainder = high % counter;
+		if (remainder == 0)
+			break;		
+		counter = counter - 1;
+	}
+	if ((counter == 1) || (high == 1)) {
+		highFound = true;
+		finished = true;		
+		println(high);
+	}
+	distance++;
+}
+println("Finished!");

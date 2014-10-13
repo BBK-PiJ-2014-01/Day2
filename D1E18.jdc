@@ -1,0 +1,71 @@
+
+/* Part 1 of Exercise 18
+
+double infiniteSum = 0;
+double sum = 0;
+int n = readInt();
+
+for (int i=0;i<=n;i++) {
+	sum = 4*Math.pow(-1,i)/(2*i+1);
+	infiniteSum = infiniteSum + sum;
+}
+println(infiniteSum);
+
+*/
+
+/* Part 2 of Exercise 18
+
+boolean finished = false;
+double infiniteSum = 0;
+double sum = 0;
+int test = 0;
+int i=0;
+
+while(!finished) {
+	sum = 4*Math.pow(-1,i)/(2*i+1);
+	infiniteSum = infiniteSum + sum;
+	test = (int) (infiniteSum*100) % 100;
+	if (test == 14)
+		finished = true; 
+	else
+		i++;
+}
+println(i);
+
+*/
+
+/* Part 2 of Exercise 18 - Alternative evaluation method
+
+boolean finished = false;
+double infiniteSum = 0;
+double sum = 0;
+int i=0;
+
+while(!finished) {
+	sum = 4*Math.pow(-1,i)/(2*i+1);
+	infiniteSum = infiniteSum + sum;
+	if ((infiniteSum - 3.14 <= 0.01) && (infiniteSum - 3.14 >= 0))
+		finished = true; 
+	else
+		i++;
+}
+println(infiniteSum + " " + i);
+
+*/
+
+// Part 3 of Exercise 18
+
+boolean finished = false;
+double infiniteSum = 0;
+double sum = 0;
+int i=0;
+
+while(!finished) {
+	sum = 4*Math.pow(-1,i)/(2*i+1);
+	infiniteSum = infiniteSum + sum;
+	if ((infiniteSum - 3.1415926535 <= 0.0000000001) && (infiniteSum - 3.1415926535 >= 0))
+		finished = true; 
+	else
+		i++;
+}
+println(infiniteSum + " " + i);

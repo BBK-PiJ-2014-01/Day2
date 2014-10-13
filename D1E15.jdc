@@ -1,0 +1,21 @@
+boolean guessed = false;
+int x = 0;
+int counter = 0;
+int numberToGuess = (int) Math.abs(1000 * Math.random());
+println("Try to guess my number!");
+
+while (!guessed) {
+	counter++;
+	print("Tell me a number: ");
+	x = readInt();
+	if (x == numberToGuess) {
+		println("CORRECT");
+		guessed = true;
+	} else {
+	if (x > numberToGuess)
+		println("No! My number is lower.");
+	else
+		println("No! My number is higher.");	
+	}
+}
+println("You needed " + counter + " guesses");
